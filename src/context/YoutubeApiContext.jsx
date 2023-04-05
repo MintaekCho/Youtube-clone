@@ -8,7 +8,7 @@ const YoutubeApiContext = createContext();
 
 const fakeYoutubeClient = new FakeYoutubeClient();
 const youtubeClient = new YoutubeClient();
-const youtube = new Youtube(fakeYoutubeClient);
+const youtube = new Youtube(youtubeClient);
 
 export function YoutubeApiProvider({ children }) {
   return (

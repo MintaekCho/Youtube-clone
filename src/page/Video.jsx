@@ -20,7 +20,7 @@ export default function Video() {
       {isLoading && <p>...Loading</p>}
       {error && <p>error.....</p>}
       {videos && (
-        <ul className="grid md:grid-cols-3 md:px-7 lg:px-10 lg:grid-cols-5 gap-5 p-4 w-full min-w-[300px]">
+        <ul className="grid sm:grid-cols-2 md:grid-cols-3 md:px-7 lg:px-10 lg:grid-cols-4 2xl:grid-cols-5 gap-5 p-4 w-full min-w-[300px]">
           {videos.map((video) => (
             <VideoCard key={video.id} video={video} />
           ))}
