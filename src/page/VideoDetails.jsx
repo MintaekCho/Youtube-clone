@@ -7,9 +7,7 @@ export default function VideoDetails() {
   const {
     state: { video },
   } = useLocation();
-  console.log(video);
   const { title, channelId, channelTitle, description } = video.snippet;
-  console.log(title);
   return (
     <section className="flex flex-col lg:flex-row">
       <article className="basis-4/6">
@@ -18,10 +16,7 @@ export default function VideoDetails() {
           height="600px"
           src={`https://www.youtube.com/embed/${video.id}`}
           title={title}
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; 
-    encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          frameBorder="0"
         ></iframe>
         <div className="mt-6">
           <h2 className="text-lg font-bold my-2 mb-4">{title}</h2>
