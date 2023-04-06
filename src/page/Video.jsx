@@ -11,7 +11,9 @@ export default function Video() {
     data: videos,
     isLoading,
     error,
-  } = useQuery(["videos", q], async () => youtube.search(q));
+  } = useQuery(["videos", q], async () => youtube.search(q), {
+    staleTime: 1000 * 60 * 1,
+  });
 
   console.log(videos);
 
